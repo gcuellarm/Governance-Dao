@@ -1,6 +1,6 @@
-# [==>] Governance DAO (Foundry)
+# 🚀 Governance DAO (Foundry)
  
- ## [*] Overview (Goal + How It Works)
+ ## 🎯 Overview (Goal + How It Works)
  
  This repository contains a simple **on-chain Governance DAO** written in Solidity and tested with **Foundry**.
  
@@ -18,7 +18,7 @@
  4. After the period ends, if quorum is reached and `forVotes > againstVotes`, the proposal can be executed.
  5. Execution triggers the `DAOTreasury` to approve and then spend funds (ETH or ERC20) according to the proposal.
  
- ## [:-)] Project Structure
+ ## 🧱 Project Structure
  
  ```text
  src/
@@ -29,7 +29,7 @@
    DAO.t.sol
  ```
  
- ## [>>] Quick Start
+ ## ⚡ Quick Start
  
  ### Requirements
  - Foundry (Forge)
@@ -54,7 +54,7 @@
  forge fmt
  ```
  
- ## [TOKEN] DAOGovernanceToken.sol
+ ## ✉ DAOGovernanceToken.sol
  
  `DAOGovernanceToken` is a basic ERC20 token used as the governance voting unit.
  
@@ -94,7 +94,7 @@
  - `getVotingPower(address account)`
    - Returns `balanceOf(account)`.
  
- ## [TREASURY] DAOTreasury.sol
+ ## 🏦 DAOTreasury.sol
  
  `DAOTreasury` is responsible for holding and spending DAO funds.
  It only allows spending when instructed by the DAO contract.
@@ -132,7 +132,7 @@
  - `emergencyWithdraw(address token, uint256 amount, address recipient)`
    - Owner-only emergency escape hatch.
  
- ## [DAO] DAO.sol
+ ## 🗳️ DAO.sol
  
  `DAO` is the core governance contract:
  it stores proposals, handles voting, and triggers execution through the Treasury.
@@ -186,7 +186,7 @@
  - `proposalPassed(proposalId)`
    - Read-only helper that checks whether a proposal is currently considered “passed” after the voting period.
  
- ## [TESTS] Test Suite (DAO.t.sol)
+ ## 🧪 Test Suite (DAO.t.sol)
  
  The test file `test/DAO.t.sol` provides unit and integration coverage across:
  
